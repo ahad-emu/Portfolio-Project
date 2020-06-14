@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand ml-5 mr-5" href="#">AHAD EMU</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link mr-3" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link mr-3" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#" >BLOG</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item mr-sm-2">
+            <a class="nav-link" href="#" >About</a>
+          </li>
+          <li class="nav-item my-2 my-sm-0 mr-5">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
