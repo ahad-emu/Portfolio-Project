@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-<img class="img-fluid" src="{% static 'images/background2.jpg' %}" alt="Background" height="670px" width="100%">
+<div class="background">
 
+</div>
+<div class="card-group">
+  <div class="card profile-card">
+    <img class="card-img-top" src="{% static 'images/profile.jpg' %}" alt="profile image">
+    <div class="card-body">
+      <h5 class="card-title text-light">AHAD EMU</h5>
+      <p class="card-text text-light">FULL STACK WEB DEVELOPER </p>
+    </div>
+  </div>
+</div>
 {% endblock %}
