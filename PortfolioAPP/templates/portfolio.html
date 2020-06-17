@@ -12,17 +12,19 @@
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
+  <div class="album py-5 bg-dark">
     <div class="container">
       <div class="row">
+        {% for item in items %}
         <div class="col-md-4">
           <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="" alt="portfolio image">
+            <img class="card-img-top" src="{{ item.image.url }}" alt="portfolio image" height="200" width="200">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below .</p>
+              <p class="card-text">{{item.summery}}</p>
             </div>
           </div>
         </div>
+        {% endfor %}
       </div>
     </div>
   </div>
