@@ -8,5 +8,5 @@ def portfolio(request):
     items = Portfolio.objects.all()
     return render(request, "portfolio.html" , {"items" : items})
 
-def blog(request):
-    return render(request, "blog.html" ,)
+def about(request):
+    return render(request, "about.html")
