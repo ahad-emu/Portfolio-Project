@@ -1,18 +1,14 @@
 {% extends 'base.html' %}
+<!DOCTYPE html>
 {% load staticfiles %}
 {% block content %}
-<div class="background">
-
-</div>
-<div class="card-group">
-  <div class="card profile-card">
-    <a href="{% static 'images/profile.jpg' %}">
-      <img class="card-img-top" src="{% static 'images/profile.jpg' %}" alt="profile image">
-    </a>
-    <div class="card-body">
-      <h5 class="card-title text-light">AHAD EMU</h5>
-      <p class="card-text text-light">FULL STACK WEB DEVELOPER </p>
-    </div>
+<header class="masthead">
+  <div class="container">
+      <div class="masthead-subheading">Welcome To Our Studio!</div>
+      <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
   </div>
-</div>
+</header>
+
+
 {% endblock %}
