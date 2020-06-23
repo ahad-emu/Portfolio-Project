@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 
-BLOG page
+<section class="">
+  <div class="text-center">
+    <h3 class="masthead-heading text-uppercase">This is my first web blog About Python and Django</h3>
+    <h4 class="masthead-subheading text-uppercase">It's Nice To Meet You</h4>
+  </div>
+  <div class="border-top mt-5 pt-5">
+    <div class="masthead-subheading">
+      course title:
+    </div>
+    <div>
+      <a href="{% url 'pythonblog' %}" class="btn btn-primary mr-3">python</a>
+      <a href="{% url 'djangoblog' %}" class="btn btn-primary">Django</a>
+    </div>
+  </div>
+</section>
+
 
 {% endblock %}

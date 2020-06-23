@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 class="text-center border-bottom mb-2 pb-4">Python blog</h1>
+<ul>
+  {% for item in items %}
+    <li><a href="{% url 'details_django' item.django_title %}">{{item.django_title}}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
