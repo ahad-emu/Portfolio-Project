@@ -10,7 +10,8 @@ def pythonblog(request):
     return render(request, "pythonblog.html", {'items': item})
 
 def djangoblog(request):
-    return render(request, "djangoblog.html")
+    item = DjangoBlog.objects.all()
+    return render(request, "djangoblog.html", {'items': item})
 
 
 def details_python(request, PythonBlog_python_title):
