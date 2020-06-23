@@ -20,19 +20,19 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="collapse navbar-collapse mr-2" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="{% url 'firstpage' %}">BLOG</a>
+                <a class="nav-link" href="{% url 'index' %}">HOME</a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'about' %}">ABOUT</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'index' %}">Contact Us</a>
+                <a class="nav-link" href="{% url 'portfolio' %}">PORTFOLIO</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'firstpage' %}">BLOG</a>
               </li>
             </ul>
           </div>
@@ -40,7 +40,7 @@
       </nav>
     {% block content %}
     {% endblock %}
-    <footer class="page-footer font-small footer-bottom" style="background-color: #101010;">
+    <footer class="page-footer font-small" style="background-color: #101010;">
       <div class="footer-copyright text-center py-3 text-light">© AhadEmu {% now 'Y' %}</div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
