@@ -3,7 +3,18 @@
 
 <h1 class="text-center border-bottom mt-2 mb-2 pb-4">Python blog</h1>
 {% if item %}
-<div class="container">
+<div class="mr-5" style ="float:left" width="20%">
+  <ul>
+    {% for i in items %}
+      {% if i.id == item.id %}
+        <li><a class="text-primary lead" href="{% url 'details_python' i.python_title %}">{{i.python_title}}</a></li>
+      {% else %}
+        <li><a class="text-dark" href="{% url 'details_python' i.python_title %}">{{i.python_title}}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+<div class="container" width="80%">
   <h2 class="mb-5">{{item.python_title}}</h2>
   <p class="mb-5">{{item.python_summery}}</p>
   <img class="img-fluid" src="{{item.python_image.url}}" alt="">

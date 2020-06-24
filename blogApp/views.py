@@ -15,9 +15,11 @@ def djangoblog(request):
 
 
 def details_python(request, PythonBlog_python_title):
+    items = PythonBlog.objects.all()
     item = PythonBlog.objects.get(python_title = PythonBlog_python_title)
-    return render(request, "pythondetails.html", {'item': item})
+    return render(request, "pythondetails.html", {'item': item, 'items': items})
 
 def details_django(request, DjangoBlog_django_title):
+    items = DjangoBlog.objects.all()
     item = DjangoBlog.objects.get(django_title = DjangoBlog_django_title)
-    return render(request, "djangodetails.html", {'item': item})
+    return render(request, "djangodetails.html", {'item': item, 'items': items})

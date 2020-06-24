@@ -28,11 +28,19 @@
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'about' %}">ABOUT</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="{% url 'portfolio' %}">PORTFOLIO</a>
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="{% url 'firstpage' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  MY BLOG
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'firstpage' %}">BLOG</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'pythonblog' %}">1. Python</a>
+                  <a class="dropdown-item" href="{% url 'djangoblog' %}">2. Django</a>
+                </div>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'firstpage' %}">BLOG</a>
+                <a class="nav-link" href="{% url 'portfolio' %}">PORTFOLIO</a>
               </li>
             </ul>
           </div>
@@ -40,7 +48,7 @@
       </nav>
     {% block content %}
     {% endblock %}
-    <footer class="page-footer font-small" style="background-color: #101010;">
+    <footer class="page-footer font-small" style="background-color: #101010; clear:both;">
       <div class="footer-copyright text-center py-3 text-light">© AhadEmu {% now 'Y' %}</div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

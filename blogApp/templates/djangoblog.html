@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 class="text-center border-bottom mt-2 mb-2 pb-4">Django blog</h1>
-<div class="container-fluid">
+<h1 class="text-center border-bottom mt-2 pb-4">Django blog</h1>
+<div class="" style="width:18%; float:left;">
   <ul>
     {% for item in items %}
-      <li><a href="{% url 'details_django' item.django_title %}">{{item.django_title}}</a></li>
+      <li><a class="text-dark" href="{% url 'details_django' item.django_title %}">{{item.django_title}}</a></li>
     {% endfor %}
   </ul>
+</div>
+<div class="" style="width:82%; padding: 8% 15%; float:left; height:500px;">
+  <h1 class="font-italic">WelCome to my Django Blog</h1>
 </div>
 {% endblock %}
